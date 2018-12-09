@@ -56,11 +56,9 @@ static Router_t *_rutor;
         Method *methodList = class_copyMethodList(object_getClass(currentClass), &methodCount);
         if (methodCount > 0) {
             NSMutableArray<NSString*>* arr = [NSMutableArray arrayWithCapacity:methodCount];
-            if (methodCount > 0) {
-                for (unsigned int i = 0; i < methodCount; i++) {
-                    NSString *selStr = [NSString stringWithCString:sel_getName(method_getName(methodList[i])) encoding:NSUTF8StringEncoding];
-                    [arr addObject:selStr];
-                }
+            for (unsigned int i = 0; i < methodCount; i++) {
+                NSString *selStr = [NSString stringWithCString:sel_getName(method_getName(methodList[i])) encoding:NSUTF8StringEncoding];
+                [arr addObject:selStr];
             }
             NSArray<NSString*>* methods = [arr copy];
             if ([methods containsObject:ROUTE_PATH]) {
@@ -82,6 +80,28 @@ static Router_t *_rutor;
             }
         }
     }
+}
+
+- (UIViewController * _Nullable)search:(NSString *)url {
+    NSArray* vcArr = ClassGetSubclasses([UIViewController class]);
+    unsigned int methodCount = 0;
+    for (Class cls in vcArr) {
+        Method *methodList = class_copyMethodList(object_getClass(cls), &methodCount);
+        NSMutableArray<NSString*>* arr = [NSMutableArray arrayWithCapacity:methodCount];
+        for (unsigned int i = 0; i < methodCount; i++) {
+            NSString *selStr = [NSString stringWithCString:sel_getName(method_getName(methodList[i])) encoding:NSUTF8StringEncoding];
+            [arr addObject:selStr];
+        }
+        if ([arr containsObject:ROUTE_PATH]) {
+            SEL selector = NSSelectorFromString(ROUTE_PATH);
+            NSString* path = ((id(*)(id,SEL))objc_msgSend)(cls,selector);
+            if ([path isEqualToString:url]) {
+                return [[cls alloc]init];
+            }
+        }
+    }
+    
+    return nil;
 }
 
 + (instancetype)defaultRouter {

@@ -28,6 +28,8 @@ typedef void(^completeCallback)(RouterContext *context);
 + (instancetype)defaultRouter;
 + (void)start;
 
+- (UIViewController * _Nullable)search:(NSString *)url;
+
 - (void)post:(NSString *)url parameters:(NSDictionary *)parameters fail:(void(^ _Nullable)(RouterError *error))fail;
 - (void)get:(NSString *)url fail:(void(^ _Nullable)(RouterError *error))fail;
 

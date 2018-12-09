@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-  
+    NSLog(@"%@", NSStringFromClass([[Router search:ROUTER_API(@"testVC")] class]));
 }
 - (IBAction)push:(id)sender {
     [Router post:ROUTER_API(@"testVC") parameters:@{@"test" : @"311"} fail:^(RouterError_t * _Nonnull error) {

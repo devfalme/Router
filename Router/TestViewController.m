@@ -19,6 +19,7 @@ ROUTER_PATH(@"testVC")
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLog(@"%@", self.test);
+    self.view.backgroundColor = UIColor.whiteColor;
 }
 
 

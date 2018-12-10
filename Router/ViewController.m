@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = UIColor.whiteColor;
+    
     NSLog(@"%@", NSStringFromClass([[Router search:ROUTER_API(@"testVC")] class]));
 }
 - (IBAction)push:(id)sender {

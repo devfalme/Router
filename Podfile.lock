@@ -1,0 +1,16 @@
+PODS:
+  - Router_t (0.0.2)
+
+DEPENDENCIES:
+  - Router_t (~> 0.0.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Router_t
+
+SPEC CHECKSUMS:
+  Router_t: d18544fe0a2077049bab96c4daf04394ed6d6a47
+
+PODFILE CHECKSUM: 29dd2c957a17a7a1d2bff0af709edb6d2b668b38
+
+COCOAPODS: 1.5.2

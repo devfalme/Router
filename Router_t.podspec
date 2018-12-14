@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  简单跳转路由
+  简单跳转路由,0.0.2添加按url搜索控制器功能.
                    DESC
 
   s.homepage     = "https://github.com/devfalme/router.git"

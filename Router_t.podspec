@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Router_t"
-  s.version      = "0.0.2"
-  s.summary      = "添加按url搜索控制器功能."
+  s.version      = "0.0.3"
+  s.summary      = "修改使用方式."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-  简单跳转路由,0.0.2添加按url搜索控制器功能.
+  简单跳转路由,0.0.3修改使用方式.
                    DESC
 
   s.homepage     = "https://github.com/devfalme/router.git"

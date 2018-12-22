@@ -64,7 +64,7 @@ static Router_t *_rutor;
             if ([methods containsObject:ROUTE_PATH]) {
                 SEL selector = NSSelectorFromString(ROUTE_PATH);
                 NSString* path = ((id(*)(id,SEL))objc_msgSend)(currentClass,selector);
-                [Router addPaten:path callback:^(RouterContext *context) {
+                [Router addPaten:path callback:^(RouterContext *context, RouterType type) {
                     UIViewController* vc;
                     if ([methods containsObject:INSTANCE_FROM_STORY]) {
                         SEL selector = NSSelectorFromString(INSTANCE_FROM_STORY);
@@ -75,14 +75,27 @@ static Router_t *_rutor;
                     for (NSString *key in [context.parameters allKeys]) {
                         [vc setValue:context.parameters[key] forKey:key];
                     }
-                    [context.topNav pushViewController:vc animated:YES];
+                    if (type == RouterTypePush) {
+                        if (context.topNav) {
+                            [context.topNav pushViewController:vc animated:YES];
+                        }else{
+                            RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
+                            NSLog(@"%@", error.errorDescription);
+                        }
+                    }else {
+                        [context.topVC presentViewController:vc animated:YES completion:nil];
+                    }
                 }];
+            }
+            if (!Router.results.count) {
+                RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
+                NSLog(@"%@", error.errorDescription);
             }
         }
     }
 }
 
-- (UIViewController * _Nullable)search:(NSString *)url {
+- (UIViewController * _Nullable)search:(NSString *)url parameters:(nonnull NSDictionary *)parameters {
     NSArray* vcArr = ClassGetSubclasses([UIViewController class]);
     unsigned int methodCount = 0;
     for (Class cls in vcArr) {
@@ -96,7 +109,11 @@ static Router_t *_rutor;
             SEL selector = NSSelectorFromString(ROUTE_PATH);
             NSString* path = ((id(*)(id,SEL))objc_msgSend)(cls,selector);
             if ([path isEqualToString:url]) {
-                return [[cls alloc]init];
+                UIViewController *vc = [[cls alloc]init];
+                for (NSString *key in [parameters allKeys]) {
+                    [vc setValue:parameters[key] forKey:key];
+                }
+                return vc;
             }
         }
     }
@@ -119,7 +136,7 @@ static Router_t *_rutor;
     return self;
 }
 
-- (void)post:(NSString *)url parameters:(NSDictionary *)parameters fail:(void(^ _Nullable)(RouterError *error))fail {
+- (void)post:(NSString *)url parameters:(NSDictionary *)parameters type:(RouterType)type {
     URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
     [_results enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([[obj allKeys] containsObject:parser.paten]) {
@@ -128,51 +145,29 @@ static Router_t *_rutor;
                 NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:context.parameters];
                 [dict setDictionary:parameters];
             }else{
-                context.parameters = parameters;                
+                context.parameters = parameters;
             }
             completeCallback callback = obj[parser.paten];
-            if (callback) {
-                if (context.topNav) {
-                    callback(context);
-                }else{
-                    RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
-                    if (fail) {
-                        fail(error);
-                    }
-                }
-            }
+            callback(context, type);
             *stop = YES;
         }else{
             RouterError *error = [RouterError code:0 description:@"路径不存在"];
-            if (fail) {
-                fail(error);
-            }
+            NSLog(@"%@", error.errorDescription);
         }
     }];
 }
-- (void)get:(NSString *)url fail:(void (^)(RouterError_t * _Nonnull))fail {
+- (void)get:(NSString *)url type:(RouterType)type {
     URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
     [_results enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([[obj allKeys] containsObject:parser.paten]) {
             RouterContext *context = [[RouterContext alloc] init];
             context.parameters = parser.parameters;
             completeCallback callback = obj[parser.paten];
-            if (callback) {
-                if (context.topNav) {
-                    callback(context);
-                }else{
-                    RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
-                    if (fail) {
-                        fail(error);
-                    }
-                }
-            }
+            callback(context, type);
             *stop = YES;
         }else{
             RouterError *error = [RouterError code:0 description:@"路径不存在"];
-            if (fail) {
-                fail(error);
-            }
+            NSLog(@"%@", error.errorDescription);
         }
     }];
 }

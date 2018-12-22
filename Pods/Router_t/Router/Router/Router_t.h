@@ -11,6 +11,8 @@
 #import "RouterDefine_t.h"
 #import "RouterError_t.h"
 
+//注：所有由路由生成的控制器都是调用init方法生产的
+
 NS_ASSUME_NONNULL_BEGIN
 
 #ifndef Router
@@ -21,17 +23,31 @@ NS_ASSUME_NONNULL_BEGIN
 #define RouterStart [Router_t start]
 #endif
 
-typedef void(^completeCallback)(RouterContext *context);
+typedef NS_ENUM(NSUInteger, RouterType) {
+    RouterTypePush,
+    RouterTypePresent,
+};
+
+@protocol RouterProtocol <NSObject>
+
+@optional
++ (NSString *)routePath;
++ (UIViewController*) instanceFromStory;
+
+@end
+
+
+typedef void(^completeCallback)(RouterContext *context, RouterType type);
 
 @interface Router_t : NSObject
 
 + (instancetype)defaultRouter;
 + (void)start;
 
-- (UIViewController * _Nullable)search:(NSString *)url;
+- (UIViewController * _Nullable)search:(NSString *)url parameters:(NSDictionary *)parameters;
 
-- (void)post:(NSString *)url parameters:(NSDictionary *)parameters fail:(void(^ _Nullable)(RouterError *error))fail;
-- (void)get:(NSString *)url fail:(void(^ _Nullable)(RouterError *error))fail;
+- (void)post:(NSString *)url parameters:(NSDictionary *)parameters type:(RouterType)type;
+- (void)get:(NSString *)url type:(RouterType)type;
 
 
 @end

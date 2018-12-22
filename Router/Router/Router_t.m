@@ -41,11 +41,16 @@ static Router_t *_rutor;
 
 @interface Router_t ()
 @property (nonatomic, retain) NSMutableArray<NSDictionary *> *results;
+@property (nonatomic, copy) NSString *webviewClass;
 @end
 
 @implementation Router_t
 
-+ (void)start {
+- (void)registerWebviewController:(NSString *)controller {
+    self.webviewClass = controller;
+}
+
+- (void)start {
     NSArray* vcArr = ClassGetSubclasses([UIViewController class]);
     for (id cls in vcArr) {
         Class currentClass = cls;
@@ -64,7 +69,7 @@ static Router_t *_rutor;
             if ([methods containsObject:ROUTE_PATH]) {
                 SEL selector = NSSelectorFromString(ROUTE_PATH);
                 NSString* path = ((id(*)(id,SEL))objc_msgSend)(currentClass,selector);
-                [Router addPaten:path callback:^(RouterContext *context, RouterType type) {
+                [self addPaten:path callback:^(RouterContext *context, RouterType type) {
                     UIViewController* vc;
                     if ([methods containsObject:INSTANCE_FROM_STORY]) {
                         SEL selector = NSSelectorFromString(INSTANCE_FROM_STORY);
@@ -87,7 +92,7 @@ static Router_t *_rutor;
                     }
                 }];
             }
-            if (!Router.results.count) {
+            if (!self.results.count) {
                 RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
                 NSLog(@"%@", error.errorDescription);
             }
@@ -153,6 +158,8 @@ static Router_t *_rutor;
         }else{
             RouterError *error = [RouterError code:0 description:@"路径不存在"];
             NSLog(@"%@", error.errorDescription);
+            NSLog(@"将通过WebView打开\nURL:%@", url);
+            
         }
     }];
 }
@@ -168,8 +175,33 @@ static Router_t *_rutor;
         }else{
             RouterError *error = [RouterError code:0 description:@"路径不存在"];
             NSLog(@"%@", error.errorDescription);
+            NSLog(@"将通过WebView打开\nURL:%@", url);
         }
     }];
+}
+
+- (void)openWebView:(NSDictionary *)parameters type:(RouterType)type {
+    if (self.webviewClass) {
+        UIViewController *vc = [[NSClassFromString(self.webviewClass) alloc]init];
+        
+        for (NSString *key in [parameters allKeys]) {
+            [vc setValue:parameters[key] forKey:key];
+        }
+        RouterContext *context = [[RouterContext alloc] init];
+        if (type == RouterTypePush) {
+            if (context.topNav) {
+                [context.topNav pushViewController:vc animated:YES];
+            }else{
+                RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
+                NSLog(@"%@", error.errorDescription);
+            }
+        }else {
+            [context.topVC presentViewController:vc animated:YES completion:nil];
+        }
+    }else{
+        RouterError *error = [RouterError code:0 description:@"请先绑定WebviewController"];
+        NSLog(@"%@", error.errorDescription);
+    }
 }
 
 - (void)addPaten:(NSString *)paten callback:(completeCallback)callback{

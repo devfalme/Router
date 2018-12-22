@@ -13,7 +13,7 @@ pod 'Router_t', '~> 0.0.3'
 ## 怎么使用
 首先在程序启动时调用路由的start方法
 
-``` C
+``` objective-c
 RouterStart;
 //或者
 [Router_t start];
@@ -21,7 +21,7 @@ RouterStart;
 
 然后为控制器绑定URL
 
-``` C
+``` objective-c
 //可以为控制器实现RouterProtocol协议里对应的方法
 //或者直接使用宏
 //ROUTER_PATH(path)
@@ -32,7 +32,7 @@ RouterStart;
 ```
 
 跳转
-``` C
+``` objective-c
 //跳转有两种方式
 [Router post:URL parameters:par type:push/present];
 //例如
@@ -45,11 +45,12 @@ RouterStart;
 ```
 
 新增方法
-``` C
+``` objective-c
 //新增搜索控制器方法
 [Router search:URL parameters:par];
 //会根据提供的地址和参数实例化一个对应的控制器
 ```
 
 ##反馈
+
 有问题或者觉得方法不够齐全等都可以直接issues

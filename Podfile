@@ -6,7 +6,7 @@ project 'Router.xcodeproj'
 target 'Router' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
-  pod 'Router_t', '~>0.0.3'
+  pod 'Router_t', '~>0.0.4'
   # Pods for Router
 
 end

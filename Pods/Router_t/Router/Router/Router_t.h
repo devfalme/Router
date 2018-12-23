@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 #endif
 
 #ifndef RouterStart
-#define RouterStart [Router_t start]
+#define RouterStart [[Router_t defaultRouter] start]
 #endif
 
 typedef NS_ENUM(NSUInteger, RouterType) {
@@ -42,14 +42,16 @@ typedef void(^completeCallback)(RouterContext *context, RouterType type);
 @interface Router_t : NSObject
 
 + (instancetype)defaultRouter;
-+ (void)start;
+- (void)start;
 
 - (UIViewController * _Nullable)search:(NSString *)url parameters:(NSDictionary *)parameters;
 
 - (void)post:(NSString *)url parameters:(NSDictionary *)parameters type:(RouterType)type;
 - (void)get:(NSString *)url type:(RouterType)type;
 
-
+//当URL没有对应的绑定控制器将使用webview打开，不绑定将不打开
+//填入webviewController的类名即可
+- (void)registerWebviewController:(NSString *)controllerClass;
 @end
 
 NS_ASSUME_NONNULL_END

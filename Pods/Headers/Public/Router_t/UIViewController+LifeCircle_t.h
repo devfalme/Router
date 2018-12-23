@@ -1,1 +1,1 @@
-../../../Router_t/Router/Router/UIViewController+LifeCircle_t.h
+../../../Router_t/Router/Router/LifeCircle/UIViewController+LifeCircle_t.h

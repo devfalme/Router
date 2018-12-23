@@ -1,13 +1,14 @@
-![CocoaPods Compatible](https://img.shields.io/badge/pod-0.0.3-blue.svg)
+![CocoaPods Compatible](https://img.shields.io/badge/pod-0.0.4-blue.svg) ![Build status](https://img.shields.io/badge/build-passing-brightgreen.svg)
 ## 更新内容
 1. 去掉了失败的回调，改为错误打印
 2. 更改了方法的使用
 3. 增加模态方式
+4. 增加了未知URL的处理方式，需要绑定一个自定义的webview以供打开，不绑定则忽略未知URL
 
 ## 安装
 推荐使用cocoapods
 ``` Ruby
-pod 'Router_t', '~> 0.0.3'
+pod 'Router_t', '~> 0.0.4'
 ```
 或者直接把Router文件夹这个拖入工程
 ## 怎么使用

@@ -1,4 +1,4 @@
-![CocoaPods Compatible](https://img.shields.io/badge/pod-0.0.4-blue.svg) ![Build status](https://img.shields.io/badge/build-passing-brightgreen.svg)
+![CocoaPods Compatible](https://img.shields.io/badge/pod-0.0.5-blue.svg) ![Build status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Platform](https://img.shields.io/badge/platform-iOS-blue.svg) ![Email](https://img.shields.io/badge/email-devfalme@163.com-red.svg)
 ## 更新内容
 1. 去掉了失败的回调，改为错误打印
 2. 更改了方法的使用
@@ -8,7 +8,7 @@
 ## 安装
 推荐使用cocoapods
 ``` Ruby
-pod 'Router_t', '~> 0.0.4'
+pod 'Router_t', '~> 0.0.5'
 ```
 或者直接把Router文件夹这个拖入工程
 ## 怎么使用
@@ -54,4 +54,4 @@ RouterStart;
 
 ## 反馈
 
-有问题或者觉得方法不够齐全等都可以直接issues
+有问题或者觉得方法不够齐全等都可以直接issues或者联系邮箱

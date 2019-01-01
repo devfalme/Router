@@ -92,10 +92,10 @@ static Router_t *_rutor;
                     }
                 }];
             }
-            if (!self.results.count) {
-                RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
-                NSLog(@"%@", error.errorDescription);
-            }
+            //            if (!self.results.count) {
+            //                RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
+            //                NSLog(@"%@", error.errorDescription);
+            //            }
         }
     }
 }
@@ -143,7 +143,8 @@ static Router_t *_rutor;
 
 - (void)post:(NSString *)url parameters:(NSDictionary *)parameters type:(RouterType)type {
     URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
-    [_results enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    BOOL flag = NO;
+    for (NSDictionary *obj in _results) {
         if ([[obj allKeys] containsObject:parser.paten]) {
             RouterContext *context = [[RouterContext alloc] init];
             if (context.parameters) {
@@ -154,30 +155,34 @@ static Router_t *_rutor;
             }
             completeCallback callback = obj[parser.paten];
             callback(context, type);
-            *stop = YES;
-        }else{
-            RouterError *error = [RouterError code:0 description:@"路径不存在"];
-            NSLog(@"%@", error.errorDescription);
-            NSLog(@"将通过WebView打开\nURL:%@", url);
-            
+            flag = YES;
+            break;
         }
-    }];
+    }
+    if (!flag) {
+        RouterError *error = [RouterError code:0 description:@"路径不存在"];
+        NSLog(@"%@", error.errorDescription);
+        NSLog(@"将通过WebView打开\nURL:%@", url);
+    }
 }
 - (void)get:(NSString *)url type:(RouterType)type {
     URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
-    [_results enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    BOOL flag = NO;
+    for (NSDictionary *obj in _results) {
         if ([[obj allKeys] containsObject:parser.paten]) {
             RouterContext *context = [[RouterContext alloc] init];
             context.parameters = parser.parameters;
             completeCallback callback = obj[parser.paten];
             callback(context, type);
-            *stop = YES;
-        }else{
-            RouterError *error = [RouterError code:0 description:@"路径不存在"];
-            NSLog(@"%@", error.errorDescription);
-            NSLog(@"将通过WebView打开\nURL:%@", url);
+            flag = YES;
+            break;
         }
-    }];
+    }
+    if (!flag) {
+        RouterError *error = [RouterError code:0 description:@"路径不存在"];
+        NSLog(@"%@", error.errorDescription);
+        NSLog(@"将通过WebView打开\nURL:%@", url);
+    }
 }
 
 - (void)openWebView:(NSDictionary *)parameters type:(RouterType)type {

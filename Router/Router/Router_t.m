@@ -122,8 +122,9 @@ static Router_t *_rutor;
             }
         }
     }
-    
-    return nil;
+    RouterError *error = [RouterError code:1 description:@"路径不存在，返回空控制器"];
+    NSLog(@"%@", error.errorDescription);
+    return [[UIViewController alloc]init];
 }
 
 + (instancetype)defaultRouter {

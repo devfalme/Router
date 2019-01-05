@@ -6,9 +6,6 @@
 //  Copyright © 2018 daye2. All rights reserved.
 //
 
-#define STR(s) #s
-#define STRING(s) [NSString stringWithFormat:@"%s", STR(s)]
-
 #define R_EXPORT_METHOD_INTERNAL(module, path) \
 + (NSString *)routePath { \
 return [NSString stringWithFormat:@"%@:/%@", module, [path hasPrefix:@"/"]?path:[NSString stringWithFormat:@"/%@",path]]; \

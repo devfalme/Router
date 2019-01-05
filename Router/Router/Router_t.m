@@ -8,11 +8,22 @@
 
 #import "Router_t.h"
 #import "URLParser_t.h"
+#import "RouterContext_t.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 #define ROUTE_PATH @"routePath"
 #define INSTANCE_FROM_STORY @"instanceFromStory"
 #define KEY_PARAMS @"params"
+
+typedef NS_ENUM(NSUInteger, RouterType) {
+    RouterTypePush,
+    RouterTypePresent,
+};
+
+typedef void(^completeCallback)(RouterContext *context,
+                                BOOL animated,
+                                RouterType type,
+                                void (^ __nullable completion)(void));
 
 static NSArray *ClassGetSubclasses(Class parentClass) {
     int numClasses = 0, newNumClasses = objc_getClassList(NULL, 0); // 1
@@ -40,14 +51,17 @@ static NSArray *ClassGetSubclasses(Class parentClass) {
 static Router_t *_rutor;
 
 @interface Router_t ()
-@property (nonatomic, retain) NSMutableArray<NSDictionary *> *results;
+@property (nonatomic, retain) NSMutableDictionary<NSString *, completeCallback> *handleDic;
+@property (nonatomic, retain) NSMutableArray <NSString *> *urlArr;
 @property (nonatomic, copy) NSString *webviewClass;
 @end
 
 @implementation Router_t
 
-- (void)registerWebviewController:(NSString *)controller {
-    self.webviewClass = controller;
+- (void)bindUrl:(NSString *)url handle:(completeCallback)handle{
+    if ([self.urlArr containsObject:url]) {[self logError:[NSString stringWithFormat:@"URL:%@ 重复使用，可能会导致跳转不到预期的controller", url]];}
+    [self.urlArr addObject:url];
+    [self.handleDic setObject:handle forKey:url];
 }
 
 - (void)start {
@@ -69,7 +83,7 @@ static Router_t *_rutor;
             if ([methods containsObject:ROUTE_PATH]) {
                 SEL selector = NSSelectorFromString(ROUTE_PATH);
                 NSString* path = ((id(*)(id,SEL))objc_msgSend)(currentClass,selector);
-                [self addPaten:path callback:^(RouterContext *context, RouterType type) {
+                [self bindUrl:path handle:^(RouterContext_t * _Nonnull context, BOOL animated, RouterType type, void (^ _Nullable completion)(void)) {
                     UIViewController* vc;
                     if ([methods containsObject:INSTANCE_FROM_STORY]) {
                         SEL selector = NSSelectorFromString(INSTANCE_FROM_STORY);
@@ -82,51 +96,81 @@ static Router_t *_rutor;
                     }
                     if (type == RouterTypePush) {
                         if (context.topNav) {
-                            [context.topNav pushViewController:vc animated:YES];
+                            [context.topNav pushViewController:vc animated:animated];
+                            if (completion) {
+                                completion();
+                            }
                         }else{
-                            RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
-                            NSLog(@"%@", error.errorDescription);
+                            [self logError:@"导航控制器不存在"];
                         }
                     }else {
-                        [context.topVC presentViewController:vc animated:YES completion:nil];
+                        [context.topVC presentViewController:vc animated:animated completion:completion];
                     }
                 }];
             }
-            //            if (!self.results.count) {
-            //                RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
-            //                NSLog(@"%@", error.errorDescription);
-            //            }
         }
     }
+//    if (!self.urlArr.count) {
+//#warning b
+//        RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
+//        NSLog(@"%@", error.errorDescription);
+//    }
 }
 
-- (UIViewController * _Nullable)search:(NSString *)url parameters:(nonnull NSDictionary *)parameters {
-    NSArray* vcArr = ClassGetSubclasses([UIViewController class]);
-    unsigned int methodCount = 0;
-    for (Class cls in vcArr) {
-        Method *methodList = class_copyMethodList(object_getClass(cls), &methodCount);
-        NSMutableArray<NSString*>* arr = [NSMutableArray arrayWithCapacity:methodCount];
-        for (unsigned int i = 0; i < methodCount; i++) {
-            NSString *selStr = [NSString stringWithCString:sel_getName(method_getName(methodList[i])) encoding:NSUTF8StringEncoding];
-            [arr addObject:selStr];
-        }
-        if ([arr containsObject:ROUTE_PATH]) {
-            SEL selector = NSSelectorFromString(ROUTE_PATH);
-            NSString* path = ((id(*)(id,SEL))objc_msgSend)(cls,selector);
-            if ([path isEqualToString:url]) {
-                UIViewController *vc = [[cls alloc]init];
-                for (NSString *key in [parameters allKeys]) {
-                    [vc setValue:parameters[key] forKey:key];
-                }
-                return vc;
+
+
+#pragma mark push/present
+- (void)presentUrl:(NSString *)url animated:(BOOL)flag completion:(void (^ __nullable)(void))completion {
+    [self presentUrl:url parameters:nil animated:flag completion:completion];
+}
+
+- (void)presentUrl:(NSString *)url parameters:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void (^ __nullable)(void))completion {
+   [self router:url type:RouterTypePresent parameters:parameters animated:flag completion:completion];
+}
+
+- (void)pushUrl:(NSString *)url animated:(BOOL)flag completion:(void (^ __nullable)(void))completion {
+    [self pushUrl:url parameters:nil animated:flag completion:completion];
+}
+
+- (void)pushUrl:(NSString *)url parameters:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void (^ __nullable)(void))completion {
+    [self router:url type:RouterTypePush parameters:parameters animated:flag completion:completion];
+}
+
+- (void)router:(NSString *)url type:(RouterType)type parameters:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void (^ __nullable)(void))completion {
+    if ([self verify]) {
+        BOOL exist = NO;
+        URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
+        if ([self.urlArr containsObject:parser.paten]) {
+            RouterContext *context = [[RouterContext alloc] init];
+            if (context.parameters) {
+                NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:context.parameters];
+                [dict addEntriesFromDictionary:parameters];
+            }else{
+                context.parameters = parameters;
             }
+            completeCallback callback = self.handleDic[parser.paten];
+            callback(context, flag, type, completion);
+            exist = YES;
         }
+#warning openWeb
+        if (!exist) {[self logError:@"路径不存在"];}
     }
-    RouterError *error = [RouterError code:1 description:@"路径不存在，返回空控制器"];
-    NSLog(@"%@", error.errorDescription);
-    return [[UIViewController alloc]init];
 }
 
+#pragma mark 报错处理
+
+- (void)logError:(NSString *)error {
+    NSLog(@"%@", error);
+}
+
+- (BOOL)verify {
+    if (!self.urlArr.count) {
+        [self logError:@"未检测到有绑定URL的控制器"];
+        return NO;
+    }return YES;
+}
+
+#pragma mark instancetype
 + (instancetype)defaultRouter {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -137,53 +181,49 @@ static Router_t *_rutor;
 
 - (instancetype)init {
     if (self = [super init]) {
-        _results = @[].mutableCopy;
+        _urlArr = @[].mutableCopy;
+        _handleDic = @{}.mutableCopy;
     }
     return self;
 }
 
-- (void)post:(NSString *)url parameters:(NSDictionary *)parameters type:(RouterType)type {
-    URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
-    BOOL flag = NO;
-    for (NSDictionary *obj in _results) {
-        if ([[obj allKeys] containsObject:parser.paten]) {
-            RouterContext *context = [[RouterContext alloc] init];
-            if (context.parameters) {
-                NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:context.parameters];
-                [dict setDictionary:parameters];
-            }else{
-                context.parameters = parameters;
-            }
-            completeCallback callback = obj[parser.paten];
-            callback(context, type);
-            flag = YES;
-            break;
-        }
-    }
-    if (!flag) {
-        RouterError *error = [RouterError code:0 description:@"路径不存在"];
-        NSLog(@"%@", error.errorDescription);
-        NSLog(@"将通过WebView打开\nURL:%@", url);
-    }
+#pragma mark Search
+- (UIViewController * _Nullable)search:(NSString *)url {
+    return [self search:url parameters:nil];
 }
-- (void)get:(NSString *)url type:(RouterType)type {
-    URLParser *parser = [[URLParser alloc] initWithURL:[NSURL URLWithString:url]];
-    BOOL flag = NO;
-    for (NSDictionary *obj in _results) {
-        if ([[obj allKeys] containsObject:parser.paten]) {
-            RouterContext *context = [[RouterContext alloc] init];
-            context.parameters = parser.parameters;
-            completeCallback callback = obj[parser.paten];
-            callback(context, type);
-            flag = YES;
-            break;
+- (UIViewController * _Nullable)search:(NSString *)url parameters:(NSDictionary * _Nullable)parameters {
+    if ([self verify]) {
+        NSArray* vcArr = ClassGetSubclasses([UIViewController class]);
+        unsigned int methodCount = 0;
+        for (Class cls in vcArr) {
+            Method *methodList = class_copyMethodList(object_getClass(cls), &methodCount);
+            NSMutableArray<NSString*>* arr = [NSMutableArray arrayWithCapacity:methodCount];
+            for (unsigned int i = 0; i < methodCount; i++) {
+                NSString *selStr = [NSString stringWithCString:sel_getName(method_getName(methodList[i])) encoding:NSUTF8StringEncoding];
+                [arr addObject:selStr];
+            }
+            if ([arr containsObject:ROUTE_PATH]) {
+                SEL selector = NSSelectorFromString(ROUTE_PATH);
+                NSString* path = ((id(*)(id,SEL))objc_msgSend)(cls,selector);
+                if ([path isEqualToString:url]) {
+                    UIViewController *vc = [[cls alloc]init];
+                    for (NSString *key in [parameters allKeys]) {
+                        [vc setValue:parameters[key] forKey:key];
+                    }
+                    return vc;
+                }
+            }
         }
     }
-    if (!flag) {
-        RouterError *error = [RouterError code:0 description:@"路径不存在"];
-        NSLog(@"%@", error.errorDescription);
-        NSLog(@"将通过WebView打开\nURL:%@", url);
-    }
+    [self logError:@"路径不存在，返回空控制器"];
+    return [[UIViewController alloc]init];
+#warning TODO web
+}
+
+#warning TODO
+#pragma mark web
+- (void)registerWebviewController:(NSString *)controller {
+    self.webviewClass = controller;
 }
 
 - (void)openWebView:(NSDictionary *)parameters type:(RouterType)type {
@@ -198,22 +238,16 @@ static Router_t *_rutor;
             if (context.topNav) {
                 [context.topNav pushViewController:vc animated:YES];
             }else{
-                RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
-                NSLog(@"%@", error.errorDescription);
+//                RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
+//                NSLog(@"%@", error.errorDescription);
             }
         }else {
             [context.topVC presentViewController:vc animated:YES completion:nil];
         }
     }else{
-        RouterError *error = [RouterError code:0 description:@"请先绑定WebviewController"];
-        NSLog(@"%@", error.errorDescription);
+//        RouterError *error = [RouterError code:0 description:@"请先绑定WebviewController"];
+//        NSLog(@"%@", error.errorDescription);
     }
 }
 
-- (void)addPaten:(NSString *)paten callback:(completeCallback)callback{
-    NSDictionary *dict = @{paten:callback};
-    if (![_results containsObject:dict]) {
-        [_results addObject:dict];
-    }
-}
 @end

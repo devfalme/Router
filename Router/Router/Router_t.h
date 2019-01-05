@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "RouterContext_t.h"
+#import <UIKit/UIKit.h>
+
+#import "UIViewController+Router_t.h"
+#import "UINavigationController+Router_t.h"
+
 #import "RouterDefine_t.h"
-#import "RouterError_t.h"
+
+@class RouterContext_t;
 
 //注：所有由路由生成的控制器都是调用init方法生产的
 
@@ -23,35 +28,34 @@ NS_ASSUME_NONNULL_BEGIN
 #define RouterStart [[Router_t defaultRouter] start]
 #endif
 
-typedef NS_ENUM(NSUInteger, RouterType) {
-    RouterTypePush,
-    RouterTypePresent,
-};
-
 @protocol RouterProtocol <NSObject>
 
 @optional
 + (NSString *)routePath;
-+ (UIViewController*) instanceFromStory;
++ (UIViewController *)instanceFromStory;
 
 @end
-
-
-typedef void(^completeCallback)(RouterContext *context, RouterType type);
 
 @interface Router_t : NSObject
 
 + (instancetype)defaultRouter;
 - (void)start;
 
-- (UIViewController * _Nullable)search:(NSString *)url parameters:(NSDictionary *)parameters;
+- (UIViewController * _Nullable)search:(NSString *)url;
+- (UIViewController * _Nullable)search:(NSString *)url parameters:(NSDictionary * _Nullable)parameters;
 
-- (void)post:(NSString *)url parameters:(NSDictionary *)parameters type:(RouterType)type;
-- (void)get:(NSString *)url type:(RouterType)type;
+
+- (void)presentUrl:(NSString *)url animated:(BOOL)flag completion:(void (^ __nullable)(void))completion;
+- (void)presentUrl:(NSString *)url parameters:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void (^ __nullable)(void))completion;
+
+- (void)pushUrl:(NSString *)url animated:(BOOL)flag completion:(void (^ __nullable)(void))completion;
+- (void)pushUrl:(NSString *)url parameters:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void (^ __nullable)(void))completion;
+
+
 
 //当URL没有对应的绑定控制器将使用webview打开，不绑定将不打开
 //填入webviewController的类名即可
-- (void)registerWebviewController:(NSString *)controllerClass;
+//- (void)registerWebviewController:(NSString *)controllerClass;
 @end
 
 NS_ASSUME_NONNULL_END

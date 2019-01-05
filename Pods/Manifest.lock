@@ -1,16 +1,16 @@
 PODS:
-  - Router_t (0.0.4)
+  - Router_t (0.0.7)
 
 DEPENDENCIES:
-  - Router_t (~> 0.0.4)
+  - Router_t (from `../router`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Router_t
+EXTERNAL SOURCES:
+  Router_t:
+    :path: "../router"
 
 SPEC CHECKSUMS:
-  Router_t: 3ec84729b2648fc7e40baa58b7b8e10aaec1e261
+  Router_t: 5658f544d40625be672206348f78fc28dd10afc6
 
-PODFILE CHECKSUM: d535512851bce485f56fdf3bf1d250f1782c4e95
+PODFILE CHECKSUM: 030be7b59b93bd0ba45bf0873a898ce43b228788
 
-COCOAPODS: 1.5.2
+COCOAPODS: 1.6.0.beta.2

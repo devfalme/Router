@@ -19,10 +19,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
     
-    NSLog(@"%@", NSStringFromClass([[Router search:ROUTER_API(@"testVC") parameters:@{}] class]));
+    NSLog(@"%@", NSStringFromClass([[Router search:ROUTER_API(@"testVC") parameters:nil] class]));
 }
 - (IBAction)push:(id)sender {
-    [Router post:ROUTER_API(@"testVC") parameters:@{@"test" : @"311"} type:RouterTypePush];
+    [self.navigationController pushURL:ROUTER_API(@"testVC") parameters:@{@"test" : @"311"} animated:YES completion:nil];
 }
 
 

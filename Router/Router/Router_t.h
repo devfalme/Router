@@ -54,8 +54,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 //当URL没有对应的绑定控制器将使用webview打开，不绑定将不打开
-//填入webviewController的类名即可
-//- (void)registerWebviewController:(NSString *)controllerClass;
+//填入webviewController的类名即可 注：webview的URL和parameter是分开的，不再解析URL中的parameter,url 作为链接赋值给webUrl属性
+- (void)registerWebviewController:(NSString *)controllerClass;
 @end
 
 NS_ASSUME_NONNULL_END
+

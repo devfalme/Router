@@ -11,10 +11,10 @@
 #import "RouterContext_t.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "WebViewController.h"
 #define ROUTE_PATH @"routePath"
 #define INSTANCE_FROM_STORY @"instanceFromStory"
 #define KEY_PARAMS @"params"
-
 typedef NS_ENUM(NSUInteger, RouterType) {
     RouterTypePush,
     RouterTypePresent,
@@ -104,17 +104,13 @@ static Router_t *_rutor;
                             [self logError:@"导航控制器不存在"];
                         }
                     }else {
+                        vc.modalPresentationStyle = UIModalPresentationFullScreen;
                         [context.topVC presentViewController:vc animated:animated completion:completion];
                     }
                 }];
             }
         }
     }
-//    if (!self.urlArr.count) {
-//#warning b
-//        RouterError *error = [RouterError code:1 description:@"请先调用start方法"];
-//        NSLog(@"%@", error.errorDescription);
-//    }
 }
 
 
@@ -152,8 +148,8 @@ static Router_t *_rutor;
             callback(context, flag, type, completion);
             exist = YES;
         }
-#warning openWeb
-        if (!exist) {[self logError:@"路径不存在"];}
+        if (!exist) {[self logError:@"路径不存在, 从web打开"];}
+        [self web:url type:type parameter:parameters animated:flag completion:completion];
     }
 }
 
@@ -217,37 +213,40 @@ static Router_t *_rutor;
     }
     [self logError:@"路径不存在，返回空控制器"];
     return [[UIViewController alloc]init];
-#warning TODO web
 }
 
-#warning TODO
 #pragma mark web
 - (void)registerWebviewController:(NSString *)controller {
     self.webviewClass = controller;
 }
 
-- (void)openWebView:(NSDictionary *)parameters type:(RouterType)type {
+- (void)web:(NSString *)url type:(RouterType)type parameter:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void(^ _Nullable)(void))completion {
+    UIViewController *vc;
+    
+    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    [dic setObject:url forKey:@"webUrl"];
     if (self.webviewClass) {
-        UIViewController *vc = [[NSClassFromString(self.webviewClass) alloc]init];
-        
-        for (NSString *key in [parameters allKeys]) {
-            [vc setValue:parameters[key] forKey:key];
-        }
-        RouterContext *context = [[RouterContext alloc] init];
-        if (type == RouterTypePush) {
-            if (context.topNav) {
-                [context.topNav pushViewController:vc animated:YES];
-            }else{
-//                RouterError *error = [RouterError code:1 description:@"导航控制器不存在"];
-//                NSLog(@"%@", error.errorDescription);
-            }
-        }else {
-            [context.topVC presentViewController:vc animated:YES completion:nil];
-        }
+         vc = [[NSClassFromString(self.webviewClass) alloc]init];
     }else{
-//        RouterError *error = [RouterError code:0 description:@"请先绑定WebviewController"];
-//        NSLog(@"%@", error.errorDescription);
+        vc = [[WebViewController alloc]init];
+    }
+    [vc setValuesForKeysWithDictionary:dic];
+    
+    RouterContext *context = [[RouterContext alloc] init];
+    if (type == RouterTypePush) {
+        if (context.topNav) {
+            [context.topNav pushViewController:vc animated:flag];
+            if (completion) {
+                completion();
+            }
+        }else{
+            [self logError:@"导航控制器不存在"];
+        }
+    }else {
+        vc.modalPresentationStyle = UIModalPresentationFullScreen;
+        [context.topVC presentViewController:vc animated:flag completion:completion];
     }
 }
+
 
 @end

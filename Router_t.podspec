@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "Router_t"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.summary      = "用法大改."
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC
-	0.0.7用法大改.
+	0.0.8用法大改.
                    DESC
 
   s.homepage     = "https://github.com/devfalme/router.git"
@@ -117,7 +117,7 @@ Pod::Spec.new do |s|
   #  the lib prefix of their name.
   #
 
-  s.frameworks = "UIKit", "Foundation"
+  s.frameworks = "UIKit", "Foundation", "WebKit"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
   # s.library   = "iconv"

@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "UIViewController+UndefinedKey.h"
 #import "UIViewController+Router_t.h"
 #import "UINavigationController+Router_t.h"
 

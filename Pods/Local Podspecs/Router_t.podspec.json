@@ -1,8 +1,8 @@
 {
   "name": "Router_t",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "summary": "用法大改.",
-  "description": "0.0.9用法大改.",
+  "description": "0.1.0用法大改.",
   "homepage": "https://github.com/devfalme/router.git",
   "license": "MIT",
   "authors": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/devfalme/router.git",
-    "tag": "0.0.9"
+    "tag": "0.1.0"
   },
   "source_files": "Router/Router/**/*.{h,m}",
   "frameworks": [

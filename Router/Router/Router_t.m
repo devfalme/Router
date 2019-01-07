@@ -147,8 +147,10 @@ static Router_t *_rutor;
             callback(context, flag, type, completion);
             exist = YES;
         }
-        if (!exist) {[self logError:@"路径不存在, 从web打开"];}
-        [self web:url type:type parameter:parameters animated:flag completion:completion];
+        if (!exist) {
+            [self logError:@"路径不存在, 从web打开"];
+            [self web:url type:type parameter:parameters animated:flag completion:completion];
+        }
     }
 }
 

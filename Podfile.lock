@@ -1,5 +1,5 @@
 PODS:
-  - Router_t (0.0.9)
+  - Router_t (0.1.0)
 
 DEPENDENCIES:
   - Router_t (from `../router`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../router"
 
 SPEC CHECKSUMS:
-  Router_t: 6aaaef7cfe3dcaec4a73d4d760ba432854daaf03
+  Router_t: 2bc82a01daf08485af9217de48a36701c6d3b82b
 
 PODFILE CHECKSUM: 030be7b59b93bd0ba45bf0873a898ce43b228788
 
-COCOAPODS: 1.6.0.beta.2
+COCOAPODS: 1.5.2

@@ -11,7 +11,6 @@
 #import "RouterContext_t.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
-#import "WebViewController.h"
 #define ROUTE_PATH @"routePath"
 #define INSTANCE_FROM_STORY @"instanceFromStory"
 #define KEY_PARAMS @"params"
@@ -221,30 +220,30 @@ static Router_t *_rutor;
 }
 
 - (void)web:(NSString *)url type:(RouterType)type parameter:(NSDictionary * _Nullable)parameters animated:(BOOL)flag completion:(void(^ _Nullable)(void))completion {
-    UIViewController *vc;
-    
-    NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:parameters];
-    [dic setObject:url forKey:@"webUrl"];
     if (self.webviewClass) {
-         vc = [[NSClassFromString(self.webviewClass) alloc]init];
-    }else{
-        vc = [[WebViewController alloc]init];
-    }
-    [vc setValuesForKeysWithDictionary:dic];
-    
-    RouterContext *context = [[RouterContext alloc] init];
-    if (type == RouterTypePush) {
-        if (context.topNav) {
-            [context.topNav pushViewController:vc animated:flag];
-            if (completion) {
-                completion();
-            }
-        }else{
-            [self logError:@"导航控制器不存在"];
+        UIViewController *vc;
+        
+        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithDictionary:parameters];
+        [dic setObject:url forKey:@"webUrl"];
+        if (self.webviewClass) {
+            vc = [[NSClassFromString(self.webviewClass) alloc]init];
         }
-    }else {
-        vc.modalPresentationStyle = UIModalPresentationFullScreen;
-        [context.topVC presentViewController:vc animated:flag completion:completion];
+        [vc setValuesForKeysWithDictionary:dic];
+        
+        RouterContext *context = [[RouterContext alloc] init];
+        if (type == RouterTypePush) {
+            if (context.topNav) {
+                [context.topNav pushViewController:vc animated:flag];
+                if (completion) {
+                    completion();
+                }
+            }else{
+                [self logError:@"导航控制器不存在"];
+            }
+        }else {
+            vc.modalPresentationStyle = UIModalPresentationFullScreen;
+            [context.topVC presentViewController:vc animated:flag completion:completion];
+        }     
     }
 }
 

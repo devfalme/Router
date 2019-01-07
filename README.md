@@ -1,10 +1,10 @@
-![CocoaPods Compatible](https://img.shields.io/badge/pod-0.0.8-blue.svg) ![Build status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Platform](https://img.shields.io/badge/platform-iOS-blue.svg) ![Email](https://img.shields.io/badge/email-devfalme@163.com-red.svg)
+![CocoaPods Compatible](https://img.shields.io/badge/pod-0.0.9-blue.svg) ![Build status](https://img.shields.io/badge/build-passing-brightgreen.svg) ![Platform](https://img.shields.io/badge/platform-iOS-blue.svg) ![Email](https://img.shields.io/badge/email-devfalme@163.com-red.svg)
 ## 更新内容
 大改，有空在写文档
 ## 安装
 推荐使用cocoapods
 ``` Ruby
-pod 'Router_t', '~> 0.0.8'
+pod 'Router_t', '~> 0.0.9'
 ```
 或者直接把Router文件夹这个拖入工程
 ## 怎么使用

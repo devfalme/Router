@@ -1,8 +1,8 @@
 {
   "name": "Router_t",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "summary": "用法大改.",
-  "description": "0.0.7用法大改.",
+  "description": "0.0.8用法大改.",
   "homepage": "https://github.com/devfalme/router.git",
   "license": "MIT",
   "authors": {
@@ -13,12 +13,13 @@
   },
   "source": {
     "git": "https://github.com/devfalme/router.git",
-    "tag": "0.0.7"
+    "tag": "0.0.8"
   },
   "source_files": "Router/Router/**/*.{h,m}",
   "frameworks": [
     "UIKit",
-    "Foundation"
+    "Foundation",
+    "WebKit"
   ],
   "requires_arc": true
 }

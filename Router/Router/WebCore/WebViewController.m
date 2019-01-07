@@ -12,7 +12,6 @@
 #import "WebRightMenuView.h"
 #import "SVProgressHUD.h"
 #import "UIColor+Hex.h"
-#import "AppDelegate+RotationExtension.h"
 #import <WebKit/WebKit.h>
 #import "WebViewController.h"
 #define S_Height [UIScreen mainScreen].bounds.size.height
@@ -117,7 +116,7 @@ static CGFloat OffY_Bottom = 50;
         }
     }
     if ([message isEqualToString:@"退出棋牌游戏"]) {
-        [self forceRotationScreenOrientationToPortrait];
+//        [self forceRotationScreenOrientationToPortrait];
         completionHandler();
         return;
     }
@@ -138,7 +137,7 @@ static CGFloat OffY_Bottom = 50;
         }
     }
     if ([url containsString:@"joinGamePlay"]) {
-        [self forceRotationScreenOrientationToLandscape];
+//        [self forceRotationScreenOrientationToLandscape];
         decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }
@@ -234,30 +233,30 @@ static CGFloat OffY_Bottom = 50;
             break;
     }
 }
-
-/**< 强制旋转屏幕为横屏 */
-- (void)forceRotationScreenOrientationToLandscape {
-    
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    app.isLandscape = YES;
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
-    //上一句话是防止手动先把设备置为竖屏,导致下面的语句失效.
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
-    [self resetFrame];
-    [_webView setAllowsBackForwardNavigationGestures:false];
-}
-
-/**< 强制旋转屏幕为竖屏 */
-- (void)forceRotationScreenOrientationToPortrait {
-    
-    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    app.isLandscape = NO;
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
-    //上一句话是防止手动先把设备置为横屏,导致下面的语句失效.
-    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
-    [self resetFrame];
-    [_webView setAllowsBackForwardNavigationGestures:true];
-}
+//
+///**< 强制旋转屏幕为横屏 */
+//- (void)forceRotationScreenOrientationToLandscape {
+//
+//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    app.isLandscape = YES;
+//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
+//    //上一句话是防止手动先把设备置为竖屏,导致下面的语句失效.
+//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
+//    [self resetFrame];
+//    [_webView setAllowsBackForwardNavigationGestures:false];
+//}
+//
+///**< 强制旋转屏幕为竖屏 */
+//- (void)forceRotationScreenOrientationToPortrait {
+//
+//    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
+//    app.isLandscape = NO;
+//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationLandscapeLeft] forKey:@"orientation"];
+//    //上一句话是防止手动先把设备置为横屏,导致下面的语句失效.
+//    [[UIDevice currentDevice] setValue:[NSNumber numberWithInteger:UIDeviceOrientationPortrait] forKey:@"orientation"];
+//    [self resetFrame];
+//    [_webView setAllowsBackForwardNavigationGestures:true];
+//}
 
 - (void)resetFrame {
     

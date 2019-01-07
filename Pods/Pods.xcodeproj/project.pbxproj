@@ -7,47 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0833BEA28C133AE1E798E522166E4258 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 972A29DA3BA2AEF867A14A55A2EE240D /* SVRadialGradientLayer.m */; };
-		090449CFA4CE773BE6DEF3C8D6D9F822 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AD4B54AD13C03848CE191155B6B24FC /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0A97AF0ACED762FFB6DA09045B3B92A6 /* RouterContext_t.h in Headers */ = {isa = PBXBuildFile; fileRef = C35C60BEE85FFB68E4E3823D09C6743E /* RouterContext_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		12BB0697A54F2C6C8B4B7B1BA07FB9DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
-		13AC5507A4687F8074B66C8F3EF94F39 /* WebRightMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = E59C0492B50573B2B2A0E409D43FCB20 /* WebRightMenuView.m */; };
-		150C3E345D92B1308FD9E59AA0B38432 /* RouterUnit_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 639958CE70CC2BCC70BE522DCAF2717C /* RouterUnit_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1534587578FC4533E600B3FD6F246514 /* URLParser_t.h in Headers */ = {isa = PBXBuildFile; fileRef = D106B40A5A1046D446DF8BFA60F774AF /* URLParser_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		171C1FE05DEC2745E2B24377BE838316 /* UIViewController+LifeCircle_t.m in Sources */ = {isa = PBXBuildFile; fileRef = E6A3F0789EE611D064F1CE07F81CC524 /* UIViewController+LifeCircle_t.m */; };
-		1EB79237E2087D5B61C814DF58B209F7 /* AppDelegate+RotationExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = E07F84D8E4410158FAEBC57096972439 /* AppDelegate+RotationExtension.m */; };
-		265941F0A0F3441025D0DDBA4A790852 /* RouterDefine_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 58C6FEDD8B0B63F5C031A90CCA98B221 /* RouterDefine_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		380B38CB16D75C75CFCCFA991EE1AF41 /* WebRightMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 52AB9AC79BD99C7C93BDD39A7A9FDCB2 /* WebRightMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3EA70B05ECB256900D82D329F56C3549 /* RouterContext_t.m in Sources */ = {isa = PBXBuildFile; fileRef = D4DCAAB27420020A7E9058414EDDF80A /* RouterContext_t.m */; };
-		43A17AE59D41C3D3953222E0EC9F7A1B /* RouterUnit_t.m in Sources */ = {isa = PBXBuildFile; fileRef = DC5B30203A428D0B5C2FF1224DF20DA3 /* RouterUnit_t.m */; };
-		4EC79B7A358C50626D47267478396725 /* WZFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CABE610EABEDBEC50E2927C293BE5CDF /* WZFlashButton.m */; };
-		5283F8286E454FB4737EAD8F5A21D4A2 /* AppDelegate+RotationExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = A826A5894CB68E460375394282D3B8B1 /* AppDelegate+RotationExtension.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		55AFA9B28657FCFB38751A9A73C7DEA4 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D52FCFFC2CF46FDA1D637383F3EF377C /* SVProgressHUD.m */; };
-		667A0549213C8AE46703AD2D703FE965 /* UIViewController+Router_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F244A2DE939C1BD1A051B6CB4A8BCA7 /* UIViewController+Router_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		693DCD9484A0E216D4E36A57C172AE6D /* URLParser_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 051D4E1B4D75656C5C47B6A69E0EF53D /* URLParser_t.m */; };
-		6B3B0F65C5F300651F255BF83CD6A397 /* UIViewController+LifeCircle_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 0915CF60EB159E2461B438059602472D /* UIViewController+LifeCircle_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6F65C424E07468AF1E530B7AAEAA253A /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31E3E6F56AE565C1C100AF801286A9D7 /* SVIndefiniteAnimatedView.m */; };
-		714B1113959376CECAE9055652043E34 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D13CAE93A2B0ECEF69EF1E090E1D761 /* UIColor+Hex.m */; };
-		77913899080049071FC229818910ECB7 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFAFC2A943548BC58011983BC19D2CB6 /* SVProgressAnimatedView.m */; };
-		798A8711F8C5AEE7DBAAA8C8568CEC27 /* ControllerLifeCircleHook_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 11006E552A36505861D01296A57138BE /* ControllerLifeCircleHook_t.m */; };
-		7BD9C05C910F28971E61CE8F55CE4FA5 /* WebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E559DCC61940DAB5B8368CEA691AA6F9 /* WebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7FA1DAE976A37D9E7AAD652F4C9EFC0C /* ControllerLifeCircleHook_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 05574176DFEB1E74A45651BB3A9161C2 /* ControllerLifeCircleHook_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		80D152C67E53E34F6E4BDCA9105A2DE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
-		8996F345DEA032F253B2CFCD746A5041 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D1711F9241A7B19B2D489B63DA4822 /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9218F86D78C5B16EEE76AD408E267BFC /* WZFlashButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 7476B7C981EBA4C40CB5E79AE319602F /* WZFlashButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		06A672EC8ED6B708C8452EA68CE04009 /* WZFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FEBDD8BEBD0CD5194981FB8C8C38B12 /* WZFlashButton.m */; };
+		077BD848E208FED95156A65B2B6CFCA6 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C23957B94C6DB85C675F85CE26FBA5 /* SVIndefiniteAnimatedView.m */; };
+		2F0C54D06C46C1A45A2E3ED4247DA8C5 /* WebRightMenuView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BF8461DD26E622B776E3901BCB27B3E /* WebRightMenuView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		308D78022FA19A802A293249CEB3F273 /* Router_t-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0846AFFF9AEE63EA98F840F969C1900 /* Router_t-dummy.m */; };
+		347853DD6A17477B8C316F776BC66755 /* ControllerLifeCircleHook_t.h in Headers */ = {isa = PBXBuildFile; fileRef = D68F71A7265A4945D562D5A40366AA6B /* ControllerLifeCircleHook_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		37ED4E19CECCDE75F74E138D6945BA9C /* RouterContext_t.h in Headers */ = {isa = PBXBuildFile; fileRef = F809BF8E7DCA98E8A687790FC987319E /* RouterContext_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		494FEC6D155BD4393B06C3852C6B7322 /* RouterDefine_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E94A76BDE4B0BA458076FF28E747A1F /* RouterDefine_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5136289E462272A80CF27244AD685E5E /* UIViewController+LifeCircle_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 76825C372ACAE55FCB373CE02BEB2095 /* UIViewController+LifeCircle_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		54DA2B21FA0A5087C0A1D30974148181 /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 105DA403C00664A0704A0A493C2EA385 /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58707960F452C744693EB612E2427F22 /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EC7E5BF0D86D1A9CD9AB0DEFD6E9DC1 /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		59EAF3B0CD043E84C620B6733C456198 /* WebViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = E7DC996E78A9154AADD37E09694C3E7E /* WebViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		615A0DD71FDF00E2A4EFAF84E17A5BD8 /* WZFlashButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 08DF31CD6968EA884F3A20049AD86994 /* WZFlashButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7003F7E5A0E714B2235ED84464613E30 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03074534500D08B10E6A7E1630099AC2 /* WebKit.framework */; };
+		7AB3007FC272351088E224E18FD18103 /* RouterUnit_t.h in Headers */ = {isa = PBXBuildFile; fileRef = F81E4316F7F76B894F84552D608BD8F4 /* RouterUnit_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		86EDB620B557D09FA719DC2CA4B24B62 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = E881BA08E0AB6E0FB5B62030F3A1D47B /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		87D01818188466DE44ABABBA3326AAEC /* ControllerLifeCircleHook_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E180B606A9934FA66B25D0FC778CD49 /* ControllerLifeCircleHook_t.m */; };
+		8B78724210E15990C4E54B939E5DC068 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E77DFEF67BB263B1A1489458749D2349 /* WebViewController.m */; };
 		93A9C054A1F62C2B95A2EC9676561424 /* Pods-Router-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E77120FCE7A05A2408976151C5AB867 /* Pods-Router-dummy.m */; };
-		98DF1E34586011F227B2AFE3E7AD2C46 /* Router_t.h in Headers */ = {isa = PBXBuildFile; fileRef = EF3157F8D8674E6D154C4F876583983E /* Router_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		99345B02621C5D93C24B82CCBBF162BF /* Router_t-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAD1D2C5B58072A90F8126BBC38009 /* Router_t-dummy.m */; };
-		AC06CF4C96308B781057DB8180F4CF67 /* RouterError_t.m in Sources */ = {isa = PBXBuildFile; fileRef = AA7D663490B30DF3ECDA180B89E298BC /* RouterError_t.m */; };
-		AF1891974E1258989DBE2DD65FC49CFF /* SVProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 3595EC103F2375B5A76878168D20CCAC /* SVProgressHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B21CB95A7A79987D416B1E78A0A82DAC /* RouterError_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8DC4C7408665BC4BFF91C1E1A023F8 /* RouterError_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B2887C424239ED46CDD8B2879CAC631B /* UINavigationController+Router_t.m in Sources */ = {isa = PBXBuildFile; fileRef = D750D867EE50E5733904356CE5D1AD56 /* UINavigationController+Router_t.m */; };
-		B83839EEF9E5FC014709DF34B7B09570 /* Router_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F711584228367F28F32547AB7A2E8AE /* Router_t.m */; };
-		B99E2D8186F1D12BA757C6EB01C274D1 /* SVProgressAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 43CA36C40A9294A95682A3311FF2114E /* SVProgressAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		BF97A32236D4BD7B3C382B10395F50B7 /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = C6B4FDFFEAB3ECB8EA8FB1BBA6631225 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D2CDE67BF4E8B7414A0F1341AC1B14BA /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C01A5F3C16443692FF25BAF639FA78C4 /* WebViewController.m */; };
-		D7EC274E5D56B509925EFAFCEA13D53F /* UINavigationController+Router_t.h in Headers */ = {isa = PBXBuildFile; fileRef = F879A67870AE2F1A2CD6EDE7EE084A61 /* UINavigationController+Router_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F4E18C572AE7DF40DA5B5237846BF81D /* UIViewController+Router_t.m in Sources */ = {isa = PBXBuildFile; fileRef = A7AE748DFB4F1B97A1BD7EF1BEC0F42E /* UIViewController+Router_t.m */; };
+		A2E743CF041E3F65D76FDA2F45A2E6F2 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 956CF6869697F0C0863E4FFD84C90FEA /* UIColor+Hex.m */; };
+		B915E9BA328A14DB7F198C8417C75AEB /* RouterContext_t.m in Sources */ = {isa = PBXBuildFile; fileRef = D9830BD699DA468D63DC6549945577C7 /* RouterContext_t.m */; };
+		BDC5D0F079E0269E20DA9A810C5DADC9 /* UIViewController+Router_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CF2EB649A06C53ECDDEF919502AA7B4 /* UIViewController+Router_t.m */; };
+		C616404CB44FC1ED566FD1BF98814A32 /* UIViewController+Router_t.h in Headers */ = {isa = PBXBuildFile; fileRef = ED533C3165B7449A0FBC5B5A080D0BCC /* UIViewController+Router_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CB98438DAFA0B4CD472F3BB29617238B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B98C6F152FF0922D5549B11DAB7894 /* Foundation.framework */; };
+		CBBBDD4EA08DA7A5B1CB19889F7E0614 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39BBFD317A099590EE8F3F8B71C08AE7 /* UIKit.framework */; };
+		D32784BE5046541E8DAA742AD2DB506B /* WebRightMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 87E0C3AA99E48E753F7A252AA871033D /* WebRightMenuView.m */; };
+		D33093B5E5CC6A0511E54D5168C2AC11 /* UIViewController+LifeCircle_t.m in Sources */ = {isa = PBXBuildFile; fileRef = E31B6B9EFBBD27DF67AB135B8010D2A3 /* UIViewController+LifeCircle_t.m */; };
+		D33A6D4248EFEBDF37FB8CE9985B809B /* SVRadialGradientLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B718DD5CDBC8C11AE4C0C9B94198788 /* SVRadialGradientLayer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D38DDCFAD041B9FAA86AB1AA008D74EF /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 919DD9B3980FC8BE1F609CFE9141E0DC /* SVProgressHUD.m */; };
+		EA153788E77DADAE1B841FCCE41C4F15 /* UINavigationController+Router_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 1294EF167118FA1EB8AD54DF65FB766D /* UINavigationController+Router_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ED7CA400DB1B99DA46994052D05FF17F /* Router_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DAA2CC0396C1139217175A71CA95F3B /* Router_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F121BB9E8D7E44913EE777BBB508B239 /* SVIndefiniteAnimatedView.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D1F88A07B5BC0F64140ECDB09556FC /* SVIndefiniteAnimatedView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F4F962B923B03ECC09D04DF2F6ACCEFA /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = E63CFF2EA3B0FDD17F31178FF59E2907 /* SVProgressAnimatedView.m */; };
+		F5B84676084CF74D695EE6B63379C5B1 /* URLParser_t.h in Headers */ = {isa = PBXBuildFile; fileRef = 701800846F65FFA0927D00D73549DA30 /* URLParser_t.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		F67F5BD9C97B7BEB90A13FE1C7B8930D /* UINavigationController+Router_t.m in Sources */ = {isa = PBXBuildFile; fileRef = A6DB9E5DDB0417F51C5F9FA01B096AED /* UINavigationController+Router_t.m */; };
+		F6EE8572CC53CF027DF5200C554BE0A2 /* Router_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E3D0F7FA8E49F8DDF740D30A1CED4A /* Router_t.m */; };
+		F85139613F85E5B67BC884FD6C666AA0 /* RouterUnit_t.m in Sources */ = {isa = PBXBuildFile; fileRef = D1DF5CED4CA234302CFF96F3C88E4058 /* RouterUnit_t.m */; };
+		F8FF7D13E5C2D3BB30B6124D65E80DAA /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = A34213656DE6C615C0ECF79E4DFD4A7A /* SVRadialGradientLayer.m */; };
+		FC6C2E4503669086752655931A5EDC21 /* URLParser_t.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5D35007707F524DCB5F51C86FE3150 /* URLParser_t.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,61 +58,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00203D5CF5D18F6525D31428D522D794 /* Router_t.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Router_t.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		051D4E1B4D75656C5C47B6A69E0EF53D /* URLParser_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = URLParser_t.m; sourceTree = "<group>"; };
-		05574176DFEB1E74A45651BB3A9161C2 /* ControllerLifeCircleHook_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ControllerLifeCircleHook_t.h; sourceTree = "<group>"; };
-		0915CF60EB159E2461B438059602472D /* UIViewController+LifeCircle_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LifeCircle_t.h"; sourceTree = "<group>"; };
-		11006E552A36505861D01296A57138BE /* ControllerLifeCircleHook_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ControllerLifeCircleHook_t.m; sourceTree = "<group>"; };
-		1D13CAE93A2B0ECEF69EF1E090E1D761 /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		03074534500D08B10E6A7E1630099AC2 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		07C23957B94C6DB85C675F85CE26FBA5 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		08DF31CD6968EA884F3A20049AD86994 /* WZFlashButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WZFlashButton.h; sourceTree = "<group>"; };
+		098B40E63E75BE5FA54D69865C28490C /* Router_t.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = Router_t.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		0B718DD5CDBC8C11AE4C0C9B94198788 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		105DA403C00664A0704A0A493C2EA385 /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		10E3D0F7FA8E49F8DDF740D30A1CED4A /* Router_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Router_t.m; path = Router/Router/Router_t.m; sourceTree = "<group>"; };
+		1294EF167118FA1EB8AD54DF65FB766D /* UINavigationController+Router_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Router_t.h"; sourceTree = "<group>"; };
 		212FC36096C0AEFED6A54BA4CC6A39A1 /* Pods-Router-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Router-acknowledgements.plist"; sourceTree = "<group>"; };
+		2BF8461DD26E622B776E3901BCB27B3E /* WebRightMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WebRightMenuView.h; sourceTree = "<group>"; };
+		2CF2EB649A06C53ECDDEF919502AA7B4 /* UIViewController+Router_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Router_t.m"; sourceTree = "<group>"; };
 		2DB87D916C1142F6A1BDF4FC8CF1A476 /* Pods-Router-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Router-frameworks.sh"; sourceTree = "<group>"; };
-		2F8DC4C7408665BC4BFF91C1E1A023F8 /* RouterError_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RouterError_t.h; sourceTree = "<group>"; };
-		31E3E6F56AE565C1C100AF801286A9D7 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
-		3595EC103F2375B5A76878168D20CCAC /* SVProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		31F0B0B26ACD31D9ECFDEE872F931BDE /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		39BBFD317A099590EE8F3F8B71C08AE7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		39DF985AF50EABC4DE9A426E96B26948 /* Pods-Router.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Router.debug.xcconfig"; sourceTree = "<group>"; };
-		3FCAD1D2C5B58072A90F8126BBC38009 /* Router_t-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Router_t-dummy.m"; sourceTree = "<group>"; };
-		43CA36C40A9294A95682A3311FF2114E /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
-		4AD4B54AD13C03848CE191155B6B24FC /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
-		4F244A2DE939C1BD1A051B6CB4A8BCA7 /* UIViewController+Router_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Router_t.h"; sourceTree = "<group>"; };
-		52AB9AC79BD99C7C93BDD39A7A9FDCB2 /* WebRightMenuView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WebRightMenuView.h; sourceTree = "<group>"; };
-		58C6FEDD8B0B63F5C031A90CCA98B221 /* RouterDefine_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RouterDefine_t.h; path = Router/Router/RouterDefine_t.h; sourceTree = "<group>"; };
-		5F711584228367F28F32547AB7A2E8AE /* Router_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Router_t.m; path = Router/Router/Router_t.m; sourceTree = "<group>"; };
-		639958CE70CC2BCC70BE522DCAF2717C /* RouterUnit_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RouterUnit_t.h; sourceTree = "<group>"; };
+		3A3DD37A6C9DC32B897EB3A89C3DDAC2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		3B5D35007707F524DCB5F51C86FE3150 /* URLParser_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = URLParser_t.m; sourceTree = "<group>"; };
+		3E94A76BDE4B0BA458076FF28E747A1F /* RouterDefine_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RouterDefine_t.h; path = Router/Router/RouterDefine_t.h; sourceTree = "<group>"; };
+		4DAA2CC0396C1139217175A71CA95F3B /* Router_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Router_t.h; path = Router/Router/Router_t.h; sourceTree = "<group>"; };
+		4E180B606A9934FA66B25D0FC778CD49 /* ControllerLifeCircleHook_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ControllerLifeCircleHook_t.m; sourceTree = "<group>"; };
+		4EC7E5BF0D86D1A9CD9AB0DEFD6E9DC1 /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		56D1F88A07B5BC0F64140ECDB09556FC /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		701800846F65FFA0927D00D73549DA30 /* URLParser_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = URLParser_t.h; sourceTree = "<group>"; };
 		717EBD78A96E9CBFD2D69B6F917B7FA9 /* Pods-Router-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Router-acknowledgements.markdown"; sourceTree = "<group>"; };
-		7476B7C981EBA4C40CB5E79AE319602F /* WZFlashButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WZFlashButton.h; sourceTree = "<group>"; };
+		76825C372ACAE55FCB373CE02BEB2095 /* UIViewController+LifeCircle_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LifeCircle_t.h"; sourceTree = "<group>"; };
 		788567407B52365EE881DF4DFE883263 /* libPods-Router.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Router.a"; path = "libPods-Router.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		810AC2A2526F978CE72A35E976A47AAC /* Router_t-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Router_t-prefix.pch"; sourceTree = "<group>"; };
-		89983464B76F889870D57151365B92FB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		87E0C3AA99E48E753F7A252AA871033D /* WebRightMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WebRightMenuView.m; sourceTree = "<group>"; };
+		8DCFA927ABF78BB3C1FA41F19A2E4B4E /* Router_t-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Router_t-prefix.pch"; sourceTree = "<group>"; };
+		919DD9B3980FC8BE1F609CFE9141E0DC /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		972A29DA3BA2AEF867A14A55A2EE240D /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		956CF6869697F0C0863E4FFD84C90FEA /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		9E77120FCE7A05A2408976151C5AB867 /* Pods-Router-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Router-dummy.m"; sourceTree = "<group>"; };
-		A7AE748DFB4F1B97A1BD7EF1BEC0F42E /* UIViewController+Router_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Router_t.m"; sourceTree = "<group>"; };
-		A826A5894CB68E460375394282D3B8B1 /* AppDelegate+RotationExtension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+RotationExtension.h"; sourceTree = "<group>"; };
-		AA7D663490B30DF3ECDA180B89E298BC /* RouterError_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RouterError_t.m; sourceTree = "<group>"; };
-		AFAFC2A943548BC58011983BC19D2CB6 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
-		B740318CA5C02E875F2F4B89BFF4063A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9EE24704601AB146BE437CF8DFEF79C6 /* Router_t.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Router_t.xcconfig; sourceTree = "<group>"; };
+		9FEBDD8BEBD0CD5194981FB8C8C38B12 /* WZFlashButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WZFlashButton.m; sourceTree = "<group>"; };
+		A34213656DE6C615C0ECF79E4DFD4A7A /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		A6DB9E5DDB0417F51C5F9FA01B096AED /* UINavigationController+Router_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Router_t.m"; sourceTree = "<group>"; };
 		BB4A3BCE5EEAFC83BD8511D2F7EFC09D /* Pods-Router.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Router.release.xcconfig"; sourceTree = "<group>"; };
-		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BCDBDD90B7ECD47712F6E541B62F98D0 /* Pods-Router-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Router-resources.sh"; sourceTree = "<group>"; };
-		C01A5F3C16443692FF25BAF639FA78C4 /* WebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
-		C35C60BEE85FFB68E4E3823D09C6743E /* RouterContext_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RouterContext_t.h; sourceTree = "<group>"; };
-		C6B4FDFFEAB3ECB8EA8FB1BBA6631225 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
-		CABE610EABEDBEC50E2927C293BE5CDF /* WZFlashButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WZFlashButton.m; sourceTree = "<group>"; };
-		D106B40A5A1046D446DF8BFA60F774AF /* URLParser_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = URLParser_t.h; sourceTree = "<group>"; };
-		D4DCAAB27420020A7E9058414EDDF80A /* RouterContext_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RouterContext_t.m; sourceTree = "<group>"; };
-		D52FCFFC2CF46FDA1D637383F3EF377C /* SVProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
-		D750D867EE50E5733904356CE5D1AD56 /* UINavigationController+Router_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+Router_t.m"; sourceTree = "<group>"; };
-		D7D1711F9241A7B19B2D489B63DA4822 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
-		DC5B30203A428D0B5C2FF1224DF20DA3 /* RouterUnit_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RouterUnit_t.m; sourceTree = "<group>"; };
-		E07F84D8E4410158FAEBC57096972439 /* AppDelegate+RotationExtension.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+RotationExtension.m"; sourceTree = "<group>"; };
-		E559DCC61940DAB5B8368CEA691AA6F9 /* WebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
-		E59C0492B50573B2B2A0E409D43FCB20 /* WebRightMenuView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WebRightMenuView.m; sourceTree = "<group>"; };
-		E5B7E9E4D7FE33E68D3B256E88C14933 /* Router_t.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Router_t.xcconfig; sourceTree = "<group>"; };
+		D0B98C6F152FF0922D5549B11DAB7894 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D1DF5CED4CA234302CFF96F3C88E4058 /* RouterUnit_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RouterUnit_t.m; sourceTree = "<group>"; };
+		D68F71A7265A4945D562D5A40366AA6B /* ControllerLifeCircleHook_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ControllerLifeCircleHook_t.h; sourceTree = "<group>"; };
+		D9830BD699DA468D63DC6549945577C7 /* RouterContext_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = RouterContext_t.m; sourceTree = "<group>"; };
+		E31B6B9EFBBD27DF67AB135B8010D2A3 /* UIViewController+LifeCircle_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LifeCircle_t.m"; sourceTree = "<group>"; };
 		E618C74A525BF01B339068F4E4D6EBA8 /* libRouter_t.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRouter_t.a; path = libRouter_t.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		E6A3F0789EE611D064F1CE07F81CC524 /* UIViewController+LifeCircle_t.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LifeCircle_t.m"; sourceTree = "<group>"; };
-		EF3157F8D8674E6D154C4F876583983E /* Router_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Router_t.h; path = Router/Router/Router_t.h; sourceTree = "<group>"; };
-		F879A67870AE2F1A2CD6EDE7EE084A61 /* UINavigationController+Router_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+Router_t.h"; sourceTree = "<group>"; };
+		E63CFF2EA3B0FDD17F31178FF59E2907 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		E77DFEF67BB263B1A1489458749D2349 /* WebViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		E7DC996E78A9154AADD37E09694C3E7E /* WebViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		E881BA08E0AB6E0FB5B62030F3A1D47B /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		ED533C3165B7449A0FBC5B5A080D0BCC /* UIViewController+Router_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Router_t.h"; sourceTree = "<group>"; };
+		F0846AFFF9AEE63EA98F840F969C1900 /* Router_t-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Router_t-dummy.m"; sourceTree = "<group>"; };
+		F809BF8E7DCA98E8A687790FC987319E /* RouterContext_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RouterContext_t.h; sourceTree = "<group>"; };
+		F81E4316F7F76B894F84552D608BD8F4 /* RouterUnit_t.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = RouterUnit_t.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,45 +120,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E24975D448521AE4AD3F6F8E5EC56ADC /* Frameworks */ = {
+		A2D39B744DF0D74E08F47700E41951D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12BB0697A54F2C6C8B4B7B1BA07FB9DF /* Foundation.framework in Frameworks */,
-				80D152C67E53E34F6E4BDCA9105A2DE1 /* UIKit.framework in Frameworks */,
+				CB98438DAFA0B4CD472F3BB29617238B /* Foundation.framework in Frameworks */,
+				CBBBDD4EA08DA7A5B1CB19889F7E0614 /* UIKit.framework in Frameworks */,
+				7003F7E5A0E714B2235ED84464613E30 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
+		0AB9F38786D13FA4362B72C3CB3A8BF0 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
-				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
+				D0B98C6F152FF0922D5549B11DAB7894 /* Foundation.framework */,
+				39BBFD317A099590EE8F3F8B71C08AE7 /* UIKit.framework */,
+				03074534500D08B10E6A7E1630099AC2 /* WebKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+				0AB9F38786D13FA4362B72C3CB3A8BF0 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4EB55547884B4F96322171F15537BF9C /* LifeCircle */ = {
+		3DD0E95F154E899F5164716CEF4A6505 /* WebCore */ = {
 			isa = PBXGroup;
 			children = (
-				05574176DFEB1E74A45651BB3A9161C2 /* ControllerLifeCircleHook_t.h */,
-				11006E552A36505861D01296A57138BE /* ControllerLifeCircleHook_t.m */,
-				0915CF60EB159E2461B438059602472D /* UIViewController+LifeCircle_t.h */,
-				E6A3F0789EE611D064F1CE07F81CC524 /* UIViewController+LifeCircle_t.m */,
+				4EC7E5BF0D86D1A9CD9AB0DEFD6E9DC1 /* UIColor+Hex.h */,
+				956CF6869697F0C0863E4FFD84C90FEA /* UIColor+Hex.m */,
+				2BF8461DD26E622B776E3901BCB27B3E /* WebRightMenuView.h */,
+				87E0C3AA99E48E753F7A252AA871033D /* WebRightMenuView.m */,
+				E7DC996E78A9154AADD37E09694C3E7E /* WebViewController.h */,
+				E77DFEF67BB263B1A1489458749D2349 /* WebViewController.m */,
+				08DF31CD6968EA884F3A20049AD86994 /* WZFlashButton.h */,
+				9FEBDD8BEBD0CD5194981FB8C8C38B12 /* WZFlashButton.m */,
+				5149155DE27ECFDC2868FA8EBECE34A5 /* SVProgressHUD(2_2_2) */,
 			);
-			name = LifeCircle;
-			path = Router/Router/LifeCircle;
+			name = WebCore;
+			path = Router/Router/WebCore;
 			sourceTree = "<group>";
 		};
 		50C3B8076CA4C4FD1E0B2FC1499C6AED /* Pods-Router */ = {
@@ -182,59 +183,47 @@
 			path = "Target Support Files/Pods-Router";
 			sourceTree = "<group>";
 		};
-		5729A189895FB39BE2E78FD2511BB286 /* Error */ = {
+		5149155DE27ECFDC2868FA8EBECE34A5 /* SVProgressHUD(2_2_2) */ = {
 			isa = PBXGroup;
 			children = (
-				2F8DC4C7408665BC4BFF91C1E1A023F8 /* RouterError_t.h */,
-				AA7D663490B30DF3ECDA180B89E298BC /* RouterError_t.m */,
-			);
-			name = Error;
-			path = Router/Router/Error;
-			sourceTree = "<group>";
-		};
-		5F0269ECFD4131E9EE1E16BF3ACBEB07 /* WebCore */ = {
-			isa = PBXGroup;
-			children = (
-				A826A5894CB68E460375394282D3B8B1 /* AppDelegate+RotationExtension.h */,
-				E07F84D8E4410158FAEBC57096972439 /* AppDelegate+RotationExtension.m */,
-				4AD4B54AD13C03848CE191155B6B24FC /* UIColor+Hex.h */,
-				1D13CAE93A2B0ECEF69EF1E090E1D761 /* UIColor+Hex.m */,
-				52AB9AC79BD99C7C93BDD39A7A9FDCB2 /* WebRightMenuView.h */,
-				E59C0492B50573B2B2A0E409D43FCB20 /* WebRightMenuView.m */,
-				E559DCC61940DAB5B8368CEA691AA6F9 /* WebViewController.h */,
-				C01A5F3C16443692FF25BAF639FA78C4 /* WebViewController.m */,
-				7476B7C981EBA4C40CB5E79AE319602F /* WZFlashButton.h */,
-				CABE610EABEDBEC50E2927C293BE5CDF /* WZFlashButton.m */,
-				6BC4491A55804F19A4E36302CB9ADFAB /* SVProgressHUD(2_2_2) */,
-			);
-			name = WebCore;
-			path = Router/Router/WebCore;
-			sourceTree = "<group>";
-		};
-		6BC4491A55804F19A4E36302CB9ADFAB /* SVProgressHUD(2_2_2) */ = {
-			isa = PBXGroup;
-			children = (
-				D7D1711F9241A7B19B2D489B63DA4822 /* SVIndefiniteAnimatedView.h */,
-				31E3E6F56AE565C1C100AF801286A9D7 /* SVIndefiniteAnimatedView.m */,
-				43CA36C40A9294A95682A3311FF2114E /* SVProgressAnimatedView.h */,
-				AFAFC2A943548BC58011983BC19D2CB6 /* SVProgressAnimatedView.m */,
-				3595EC103F2375B5A76878168D20CCAC /* SVProgressHUD.h */,
-				D52FCFFC2CF46FDA1D637383F3EF377C /* SVProgressHUD.m */,
-				C6B4FDFFEAB3ECB8EA8FB1BBA6631225 /* SVRadialGradientLayer.h */,
-				972A29DA3BA2AEF867A14A55A2EE240D /* SVRadialGradientLayer.m */,
+				56D1F88A07B5BC0F64140ECDB09556FC /* SVIndefiniteAnimatedView.h */,
+				07C23957B94C6DB85C675F85CE26FBA5 /* SVIndefiniteAnimatedView.m */,
+				E881BA08E0AB6E0FB5B62030F3A1D47B /* SVProgressAnimatedView.h */,
+				E63CFF2EA3B0FDD17F31178FF59E2907 /* SVProgressAnimatedView.m */,
+				105DA403C00664A0704A0A493C2EA385 /* SVProgressHUD.h */,
+				919DD9B3980FC8BE1F609CFE9141E0DC /* SVProgressHUD.m */,
+				0B718DD5CDBC8C11AE4C0C9B94198788 /* SVRadialGradientLayer.h */,
+				A34213656DE6C615C0ECF79E4DFD4A7A /* SVRadialGradientLayer.m */,
 			);
 			name = "SVProgressHUD(2_2_2)";
 			path = "SVProgressHUD(2_2_2)";
 			sourceTree = "<group>";
 		};
-		6C70501B1ABBAFA1CD9040C959DB32B4 /* Category */ = {
+		55A17551B8C7E61EBDB4EA5F76E539CB /* Router_t */ = {
 			isa = PBXGroup;
 			children = (
-				F81A0273FF3E2864902FEC23B60ABA4E /* UINavigationController */,
-				BC606C3AF4F5A55299EBC0B1BBE623C9 /* UIViewController */,
+				4DAA2CC0396C1139217175A71CA95F3B /* Router_t.h */,
+				10E3D0F7FA8E49F8DDF740D30A1CED4A /* Router_t.m */,
+				3E94A76BDE4B0BA458076FF28E747A1F /* RouterDefine_t.h */,
+				DCFB1F406C52A978E7A6AEF420A9BC6A /* Category */,
+				85CE6D1D599839A61C7BDB9DB17C679F /* LifeCircle */,
+				614A15078E867FC7A5BD915D67826251 /* Pod */,
+				C2B01E22537856B059F6980BFD37DB9F /* Support Files */,
+				E3AAFACDF4D1D04F2815484D8E013B43 /* Unit */,
+				3DD0E95F154E899F5164716CEF4A6505 /* WebCore */,
 			);
-			name = Category;
-			path = Router/Router/Category;
+			name = Router_t;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		614A15078E867FC7A5BD915D67826251 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				31F0B0B26ACD31D9ECFDEE872F931BDE /* LICENSE */,
+				3A3DD37A6C9DC32B897EB3A89C3DDAC2 /* README.md */,
+				098B40E63E75BE5FA54D69865C28490C /* Router_t.podspec */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		703F6AB2B8CAB94E03900F34E800DAF8 /* Products */ = {
@@ -250,64 +239,58 @@
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BACE7B37D9E01B6536380B13B0FC83D1 /* Development Pods */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F9202668644C3586E970CAD74F4D5A56 /* Development Pods */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
 				703F6AB2B8CAB94E03900F34E800DAF8 /* Products */,
 				EE5BCD26AA6B80F46ECC243450A5E3A4 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BACE7B37D9E01B6536380B13B0FC83D1 /* Development Pods */ = {
+		85CE6D1D599839A61C7BDB9DB17C679F /* LifeCircle */ = {
 			isa = PBXGroup;
 			children = (
-				FBB896E341CF1EB2690C12D95A77F2EF /* Router_t */,
+				D68F71A7265A4945D562D5A40366AA6B /* ControllerLifeCircleHook_t.h */,
+				4E180B606A9934FA66B25D0FC778CD49 /* ControllerLifeCircleHook_t.m */,
+				76825C372ACAE55FCB373CE02BEB2095 /* UIViewController+LifeCircle_t.h */,
+				E31B6B9EFBBD27DF67AB135B8010D2A3 /* UIViewController+LifeCircle_t.m */,
 			);
-			name = "Development Pods";
+			name = LifeCircle;
+			path = Router/Router/LifeCircle;
 			sourceTree = "<group>";
 		};
-		BB77B6E35B8CDE2AE50ADB9C4DB41B15 /* Unit */ = {
+		C2B01E22537856B059F6980BFD37DB9F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C35C60BEE85FFB68E4E3823D09C6743E /* RouterContext_t.h */,
-				D4DCAAB27420020A7E9058414EDDF80A /* RouterContext_t.m */,
-				639958CE70CC2BCC70BE522DCAF2717C /* RouterUnit_t.h */,
-				DC5B30203A428D0B5C2FF1224DF20DA3 /* RouterUnit_t.m */,
-				D106B40A5A1046D446DF8BFA60F774AF /* URLParser_t.h */,
-				051D4E1B4D75656C5C47B6A69E0EF53D /* URLParser_t.m */,
-			);
-			name = Unit;
-			path = Router/Router/Unit;
-			sourceTree = "<group>";
-		};
-		BC606C3AF4F5A55299EBC0B1BBE623C9 /* UIViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4F244A2DE939C1BD1A051B6CB4A8BCA7 /* UIViewController+Router_t.h */,
-				A7AE748DFB4F1B97A1BD7EF1BEC0F42E /* UIViewController+Router_t.m */,
-			);
-			name = UIViewController;
-			path = UIViewController;
-			sourceTree = "<group>";
-		};
-		BDBACCE9A8BA728CF059326836500066 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E5B7E9E4D7FE33E68D3B256E88C14933 /* Router_t.xcconfig */,
-				3FCAD1D2C5B58072A90F8126BBC38009 /* Router_t-dummy.m */,
-				810AC2A2526F978CE72A35E976A47AAC /* Router_t-prefix.pch */,
+				9EE24704601AB146BE437CF8DFEF79C6 /* Router_t.xcconfig */,
+				F0846AFFF9AEE63EA98F840F969C1900 /* Router_t-dummy.m */,
+				8DCFA927ABF78BB3C1FA41F19A2E4B4E /* Router_t-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Pods/Target Support Files/Router_t";
 			sourceTree = "<group>";
 		};
-		ECE0CB816CCA35B9D62AE1A2259D35CA /* Pod */ = {
+		DCFB1F406C52A978E7A6AEF420A9BC6A /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				89983464B76F889870D57151365B92FB /* LICENSE */,
-				B740318CA5C02E875F2F4B89BFF4063A /* README.md */,
-				00203D5CF5D18F6525D31428D522D794 /* Router_t.podspec */,
+				F04EF0D1FDF6B0A2E42084C43A7E0602 /* UINavigationController */,
+				FEAE92520A19BF1F8AD9CF87F1F168EF /* UIViewController */,
 			);
-			name = Pod;
+			name = Category;
+			path = Router/Router/Category;
+			sourceTree = "<group>";
+		};
+		E3AAFACDF4D1D04F2815484D8E013B43 /* Unit */ = {
+			isa = PBXGroup;
+			children = (
+				F809BF8E7DCA98E8A687790FC987319E /* RouterContext_t.h */,
+				D9830BD699DA468D63DC6549945577C7 /* RouterContext_t.m */,
+				F81E4316F7F76B894F84552D608BD8F4 /* RouterUnit_t.h */,
+				D1DF5CED4CA234302CFF96F3C88E4058 /* RouterUnit_t.m */,
+				701800846F65FFA0927D00D73549DA30 /* URLParser_t.h */,
+				3B5D35007707F524DCB5F51C86FE3150 /* URLParser_t.m */,
+			);
+			name = Unit;
+			path = Router/Router/Unit;
 			sourceTree = "<group>";
 		};
 		EE5BCD26AA6B80F46ECC243450A5E3A4 /* Targets Support Files */ = {
@@ -318,60 +301,58 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		F81A0273FF3E2864902FEC23B60ABA4E /* UINavigationController */ = {
+		F04EF0D1FDF6B0A2E42084C43A7E0602 /* UINavigationController */ = {
 			isa = PBXGroup;
 			children = (
-				F879A67870AE2F1A2CD6EDE7EE084A61 /* UINavigationController+Router_t.h */,
-				D750D867EE50E5733904356CE5D1AD56 /* UINavigationController+Router_t.m */,
+				1294EF167118FA1EB8AD54DF65FB766D /* UINavigationController+Router_t.h */,
+				A6DB9E5DDB0417F51C5F9FA01B096AED /* UINavigationController+Router_t.m */,
 			);
 			name = UINavigationController;
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
-		FBB896E341CF1EB2690C12D95A77F2EF /* Router_t */ = {
+		F9202668644C3586E970CAD74F4D5A56 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EF3157F8D8674E6D154C4F876583983E /* Router_t.h */,
-				5F711584228367F28F32547AB7A2E8AE /* Router_t.m */,
-				58C6FEDD8B0B63F5C031A90CCA98B221 /* RouterDefine_t.h */,
-				6C70501B1ABBAFA1CD9040C959DB32B4 /* Category */,
-				5729A189895FB39BE2E78FD2511BB286 /* Error */,
-				4EB55547884B4F96322171F15537BF9C /* LifeCircle */,
-				ECE0CB816CCA35B9D62AE1A2259D35CA /* Pod */,
-				BDBACCE9A8BA728CF059326836500066 /* Support Files */,
-				BB77B6E35B8CDE2AE50ADB9C4DB41B15 /* Unit */,
-				5F0269ECFD4131E9EE1E16BF3ACBEB07 /* WebCore */,
+				55A17551B8C7E61EBDB4EA5F76E539CB /* Router_t */,
 			);
-			name = Router_t;
-			path = ..;
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FEAE92520A19BF1F8AD9CF87F1F168EF /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED533C3165B7449A0FBC5B5A080D0BCC /* UIViewController+Router_t.h */,
+				2CF2EB649A06C53ECDDEF919502AA7B4 /* UIViewController+Router_t.m */,
+			);
+			name = UIViewController;
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6B251F1EF71910ED158E020D70CA708F /* Headers */ = {
+		B25CA1E824680328B416B04C29202CAB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5283F8286E454FB4737EAD8F5A21D4A2 /* AppDelegate+RotationExtension.h in Headers */,
-				7FA1DAE976A37D9E7AAD652F4C9EFC0C /* ControllerLifeCircleHook_t.h in Headers */,
-				98DF1E34586011F227B2AFE3E7AD2C46 /* Router_t.h in Headers */,
-				0A97AF0ACED762FFB6DA09045B3B92A6 /* RouterContext_t.h in Headers */,
-				265941F0A0F3441025D0DDBA4A790852 /* RouterDefine_t.h in Headers */,
-				B21CB95A7A79987D416B1E78A0A82DAC /* RouterError_t.h in Headers */,
-				150C3E345D92B1308FD9E59AA0B38432 /* RouterUnit_t.h in Headers */,
-				8996F345DEA032F253B2CFCD746A5041 /* SVIndefiniteAnimatedView.h in Headers */,
-				B99E2D8186F1D12BA757C6EB01C274D1 /* SVProgressAnimatedView.h in Headers */,
-				AF1891974E1258989DBE2DD65FC49CFF /* SVProgressHUD.h in Headers */,
-				BF97A32236D4BD7B3C382B10395F50B7 /* SVRadialGradientLayer.h in Headers */,
-				090449CFA4CE773BE6DEF3C8D6D9F822 /* UIColor+Hex.h in Headers */,
-				D7EC274E5D56B509925EFAFCEA13D53F /* UINavigationController+Router_t.h in Headers */,
-				6B3B0F65C5F300651F255BF83CD6A397 /* UIViewController+LifeCircle_t.h in Headers */,
-				667A0549213C8AE46703AD2D703FE965 /* UIViewController+Router_t.h in Headers */,
-				1534587578FC4533E600B3FD6F246514 /* URLParser_t.h in Headers */,
-				380B38CB16D75C75CFCCFA991EE1AF41 /* WebRightMenuView.h in Headers */,
-				7BD9C05C910F28971E61CE8F55CE4FA5 /* WebViewController.h in Headers */,
-				9218F86D78C5B16EEE76AD408E267BFC /* WZFlashButton.h in Headers */,
+				347853DD6A17477B8C316F776BC66755 /* ControllerLifeCircleHook_t.h in Headers */,
+				ED7CA400DB1B99DA46994052D05FF17F /* Router_t.h in Headers */,
+				37ED4E19CECCDE75F74E138D6945BA9C /* RouterContext_t.h in Headers */,
+				494FEC6D155BD4393B06C3852C6B7322 /* RouterDefine_t.h in Headers */,
+				7AB3007FC272351088E224E18FD18103 /* RouterUnit_t.h in Headers */,
+				F121BB9E8D7E44913EE777BBB508B239 /* SVIndefiniteAnimatedView.h in Headers */,
+				86EDB620B557D09FA719DC2CA4B24B62 /* SVProgressAnimatedView.h in Headers */,
+				54DA2B21FA0A5087C0A1D30974148181 /* SVProgressHUD.h in Headers */,
+				D33A6D4248EFEBDF37FB8CE9985B809B /* SVRadialGradientLayer.h in Headers */,
+				58707960F452C744693EB612E2427F22 /* UIColor+Hex.h in Headers */,
+				EA153788E77DADAE1B841FCCE41C4F15 /* UINavigationController+Router_t.h in Headers */,
+				5136289E462272A80CF27244AD685E5E /* UIViewController+LifeCircle_t.h in Headers */,
+				C616404CB44FC1ED566FD1BF98814A32 /* UIViewController+Router_t.h in Headers */,
+				F5B84676084CF74D695EE6B63379C5B1 /* URLParser_t.h in Headers */,
+				2F0C54D06C46C1A45A2E3ED4247DA8C5 /* WebRightMenuView.h in Headers */,
+				59EAF3B0CD043E84C620B6733C456198 /* WebViewController.h in Headers */,
+				615A0DD71FDF00E2A4EFAF84E17A5BD8 /* WZFlashButton.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,9 +363,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B0B738483A3AE8649D64753EFBE24C6F /* Build configuration list for PBXNativeTarget "Router_t" */;
 			buildPhases = (
-				BD3DE710EF0E44E22F8760BE08D78D77 /* Sources */,
-				E24975D448521AE4AD3F6F8E5EC56ADC /* Frameworks */,
-				6B251F1EF71910ED158E020D70CA708F /* Headers */,
+				115D547EFA91B0B505CD2C38E315819B /* Sources */,
+				A2D39B744DF0D74E08F47700E41951D5 /* Frameworks */,
+				B25CA1E824680328B416B04C29202CAB /* Headers */,
 			);
 			buildRules = (
 			);
@@ -440,37 +421,35 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		115D547EFA91B0B505CD2C38E315819B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87D01818188466DE44ABABBA3326AAEC /* ControllerLifeCircleHook_t.m in Sources */,
+				308D78022FA19A802A293249CEB3F273 /* Router_t-dummy.m in Sources */,
+				F6EE8572CC53CF027DF5200C554BE0A2 /* Router_t.m in Sources */,
+				B915E9BA328A14DB7F198C8417C75AEB /* RouterContext_t.m in Sources */,
+				F85139613F85E5B67BC884FD6C666AA0 /* RouterUnit_t.m in Sources */,
+				077BD848E208FED95156A65B2B6CFCA6 /* SVIndefiniteAnimatedView.m in Sources */,
+				F4F962B923B03ECC09D04DF2F6ACCEFA /* SVProgressAnimatedView.m in Sources */,
+				D38DDCFAD041B9FAA86AB1AA008D74EF /* SVProgressHUD.m in Sources */,
+				F8FF7D13E5C2D3BB30B6124D65E80DAA /* SVRadialGradientLayer.m in Sources */,
+				A2E743CF041E3F65D76FDA2F45A2E6F2 /* UIColor+Hex.m in Sources */,
+				F67F5BD9C97B7BEB90A13FE1C7B8930D /* UINavigationController+Router_t.m in Sources */,
+				D33093B5E5CC6A0511E54D5168C2AC11 /* UIViewController+LifeCircle_t.m in Sources */,
+				BDC5D0F079E0269E20DA9A810C5DADC9 /* UIViewController+Router_t.m in Sources */,
+				FC6C2E4503669086752655931A5EDC21 /* URLParser_t.m in Sources */,
+				D32784BE5046541E8DAA742AD2DB506B /* WebRightMenuView.m in Sources */,
+				8B78724210E15990C4E54B939E5DC068 /* WebViewController.m in Sources */,
+				06A672EC8ED6B708C8452EA68CE04009 /* WZFlashButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		984C42CF119454B4143B8E34302F49F3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				93A9C054A1F62C2B95A2EC9676561424 /* Pods-Router-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD3DE710EF0E44E22F8760BE08D78D77 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EB79237E2087D5B61C814DF58B209F7 /* AppDelegate+RotationExtension.m in Sources */,
-				798A8711F8C5AEE7DBAAA8C8568CEC27 /* ControllerLifeCircleHook_t.m in Sources */,
-				99345B02621C5D93C24B82CCBBF162BF /* Router_t-dummy.m in Sources */,
-				B83839EEF9E5FC014709DF34B7B09570 /* Router_t.m in Sources */,
-				3EA70B05ECB256900D82D329F56C3549 /* RouterContext_t.m in Sources */,
-				AC06CF4C96308B781057DB8180F4CF67 /* RouterError_t.m in Sources */,
-				43A17AE59D41C3D3953222E0EC9F7A1B /* RouterUnit_t.m in Sources */,
-				6F65C424E07468AF1E530B7AAEAA253A /* SVIndefiniteAnimatedView.m in Sources */,
-				77913899080049071FC229818910ECB7 /* SVProgressAnimatedView.m in Sources */,
-				55AFA9B28657FCFB38751A9A73C7DEA4 /* SVProgressHUD.m in Sources */,
-				0833BEA28C133AE1E798E522166E4258 /* SVRadialGradientLayer.m in Sources */,
-				714B1113959376CECAE9055652043E34 /* UIColor+Hex.m in Sources */,
-				B2887C424239ED46CDD8B2879CAC631B /* UINavigationController+Router_t.m in Sources */,
-				171C1FE05DEC2745E2B24377BE838316 /* UIViewController+LifeCircle_t.m in Sources */,
-				F4E18C572AE7DF40DA5B5237846BF81D /* UIViewController+Router_t.m in Sources */,
-				693DCD9484A0E216D4E36A57C172AE6D /* URLParser_t.m in Sources */,
-				13AC5507A4687F8074B66C8F3EF94F39 /* WebRightMenuView.m in Sources */,
-				D2CDE67BF4E8B7414A0F1341AC1B14BA /* WebViewController.m in Sources */,
-				4EC79B7A358C50626D47267478396725 /* WZFlashButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +525,7 @@
 		};
 		0B9C08D4E9387882AAB7DA1F2182D6C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5B7E9E4D7FE33E68D3B256E88C14933 /* Router_t.xcconfig */;
+			baseConfigurationReference = 9EE24704601AB146BE437CF8DFEF79C6 /* Router_t.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -678,7 +657,7 @@
 		};
 		F26D3AC7CB9743B2417C9CDD37029439 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5B7E9E4D7FE33E68D3B256E88C14933 /* Router_t.xcconfig */;
+			baseConfigurationReference = 9EE24704601AB146BE437CF8DFEF79C6 /* Router_t.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";

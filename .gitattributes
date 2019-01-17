@@ -1,0 +1,9 @@
+*.h linguist-language=Objective-C
+*.m linguist-language=Objective-C
+*.xml linguist-language=Objective-C
+*.podspec linguist-language=Objective-C
+*.json linguist-language=Objective-C
+*.plist linguist-language=Objective-C
+*.xcworkspacedata linguist-language=Objective-C
+*.storyboard linguist-language=Objective-C
+*.xib linguist-language=Objective-C
